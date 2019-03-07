@@ -1,0 +1,1 @@
+for f in "$(find ~/.presets -name '*' -type f -print)"; do source $f; done
