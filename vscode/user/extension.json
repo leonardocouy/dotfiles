@@ -1,0 +1,162 @@
+[
+  {
+    "metadata": {
+      "id": "e337c67b-55c2-4fef-8949-eb260e7fb7fd",
+      "publisherId": "Shan.code-settings-sync",
+      "publisherDisplayName": "Shan"
+    },
+    "name": "code-settings-sync",
+    "publisher": "Shan",
+    "version": "3.2.5"
+  },
+  {
+    "metadata": {
+      "id": "b4b6f023-bc31-4050-bb3d-f419aae20eeb",
+      "publisherId": "p1c2u.docker-compose",
+      "publisherDisplayName": "p1c2u"
+    },
+    "name": "docker-compose",
+    "publisher": "p1c2u",
+    "version": "0.3.4"
+  },
+  {
+    "metadata": {
+      "id": "96c69be9-5b09-4a18-8c82-4d30ab145017",
+      "publisherId": "formulahendry.docker-explorer",
+      "publisherDisplayName": "formulahendry"
+    },
+    "name": "docker-explorer",
+    "publisher": "formulahendry",
+    "version": "0.1.6"
+  },
+  {
+    "metadata": {
+      "id": "f30b63fa-e34a-40af-a573-5de5ecfb6c5e",
+      "publisherId": "k--kato.intellij-idea-keybindings",
+      "publisherDisplayName": "k--kato"
+    },
+    "name": "intellij-idea-keybindings",
+    "publisher": "k--kato",
+    "version": "0.2.31"
+  },
+  {
+    "metadata": {
+      "id": "a2cec723-5349-460d-9de9-0fd1f8d3456f",
+      "publisherId": "xabikos.JavaScriptSnippets",
+      "publisherDisplayName": "xabikos"
+    },
+    "name": "JavaScriptSnippets",
+    "publisher": "xabikos",
+    "version": "1.7.2"
+  },
+  {
+    "metadata": {
+      "id": "8ee0c715-ca9e-4ce2-8841-5faa5e0f3255",
+      "publisherId": "andys8.jest-snippets",
+      "publisherDisplayName": "andys8"
+    },
+    "name": "jest-snippets",
+    "publisher": "andys8",
+    "version": "1.7.0"
+  },
+  {
+    "metadata": {
+      "id": "26a529c9-2654-4b95-a63f-02f6a52429e6",
+      "publisherId": "zhuangtongfa.Material-theme",
+      "publisherDisplayName": "zhuangtongfa"
+    },
+    "name": "Material-theme",
+    "publisher": "zhuangtongfa",
+    "version": "2.18.2"
+  },
+  {
+    "metadata": {
+      "id": "fc5a3c47-de02-420d-9326-eddc9ba38f04",
+      "publisherId": "waderyan.nodejs-extension-pack",
+      "publisherDisplayName": "waderyan"
+    },
+    "name": "nodejs-extension-pack",
+    "publisher": "waderyan",
+    "version": "0.1.9"
+  },
+  {
+    "metadata": {
+      "id": "dff6b801-247e-40e9-82e8-8c9b1d19d1b8",
+      "publisherId": "christian-kohler.npm-intellisense",
+      "publisherDisplayName": "christian-kohler"
+    },
+    "name": "npm-intellisense",
+    "publisher": "christian-kohler",
+    "version": "1.3.0"
+  },
+  {
+    "metadata": {
+      "id": "a41c1549-4053-44d4-bf30-60fc809b4a86",
+      "publisherId": "christian-kohler.path-intellisense",
+      "publisherDisplayName": "christian-kohler"
+    },
+    "name": "path-intellisense",
+    "publisher": "christian-kohler",
+    "version": "1.4.2"
+  },
+  {
+    "metadata": {
+      "id": "d879ccb5-cbdb-45a1-bd74-5641ad0062df",
+      "publisherId": "Hridoy.rails-snippets",
+      "publisherDisplayName": "Hridoy"
+    },
+    "name": "rails-snippets",
+    "publisher": "Hridoy",
+    "version": "1.0.8"
+  },
+  {
+    "metadata": {
+      "id": "ae062c8a-c68e-4b92-9ecf-8f1d4288b05d",
+      "publisherId": "rebornix.ruby",
+      "publisherDisplayName": "rebornix"
+    },
+    "name": "ruby",
+    "publisher": "rebornix",
+    "version": "0.22.2"
+  },
+  {
+    "metadata": {
+      "id": "ee108066-df8b-43ae-9a83-e6c11400a759",
+      "publisherId": "jasonnutter.search-node-modules",
+      "publisherDisplayName": "jasonnutter"
+    },
+    "name": "search-node-modules",
+    "publisher": "jasonnutter",
+    "version": "1.3.0"
+  },
+  {
+    "metadata": {
+      "id": "0479fc1c-3d67-49f9-b087-fb9069afe48f",
+      "publisherId": "PeterJausovec.vscode-docker",
+      "publisherDisplayName": "PeterJausovec"
+    },
+    "name": "vscode-docker",
+    "publisher": "PeterJausovec",
+    "version": "0.5.2"
+  },
+  {
+    "metadata": {
+      "id": "583b2b34-2c1e-4634-8c0b-0b82e283ea3a",
+      "publisherId": "dbaeumer.vscode-eslint",
+      "publisherDisplayName": "dbaeumer"
+    },
+    "name": "vscode-eslint",
+    "publisher": "dbaeumer",
+    "version": "1.8.0"
+  },
+  {
+    "metadata": {
+      "id": "ae9e3eb0-3357-4cc0-90ee-598d2d384757",
+      "publisherId": "eg2.vscode-npm-script",
+      "publisherDisplayName": "eg2"
+    },
+    "name": "vscode-npm-script",
+    "publisher": "eg2",
+    "version": "0.3.5"
+  }
+]

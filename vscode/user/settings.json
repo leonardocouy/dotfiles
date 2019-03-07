@@ -1,0 +1,64 @@
+{
+  "window.zoomLevel": 0,
+  "editor.rulers": [
+    90
+  ],
+  "debug.node.autoAttach": "on",
+  "terminal.external.osxExec": "iTerm.app",
+  "files.trimTrailingWhitespace": true,
+  "files.trimFinalNewlines": true,
+  "editor.tabSize": 2,
+  "search.location": "panel",
+  "explorer.openEditors.visible": 0,
+  "workbench.colorTheme": "One Dark Pro",
+  "sync.gist": "b0be76e3d553cb72b4a967db59a1ae46",
+  "editor.fontFamily": "Hack, Menlo, Monaco, 'Courier New', monospace",
+  "workbench.panel.defaultLocation": "right",
+  "editor.fontSize": 12,
+  "terminal.integrated.fontSize": 12,
+  "local-history.daysLimit": 60,
+  "local-history.maxDisplay": 60,
+  "gitlens.hovers.currentLine.over": "line",
+  "files.exclude": {
+    "**/.git": true,
+    "**/.svn": true,
+    "**/.DS_Store": true,
+    "*/node_modules": true,
+    "**/.vscode": false,
+    "**/tmp": true,
+    "node_modules": true,
+    "**/.history": true,
+  },
+  "search.exclude": {
+    "**/node_modules": true,
+    "**/bower_components": true,
+    "**/.git": true,
+    "**/.DS_Store": true,
+    "**/tmp": true,
+    "**/coverage": true,
+    "**/build": true,
+    "**/.history": true
+  },
+  "eslint.trace.server": "messages",
+  "eslint.validate": [
+    "html",
+    "javascript",
+    "vue",
+    "vue-html"
+  ],
+  // A path added to NODE_PATH when resolving the eslint module.
+  "eslint.nodePath": "node_modules/",
+  "eslint.options": {
+    "extensions": [ //List of file extensions to activate eslint
+      ".html",
+      ".js",
+      ".vue",
+      ".jsx"
+    ],
+  },
+  "eslint.alwaysShowStatus": true,
+  "eslint.run": "onSave",
+  "terminal.integrated.confirmOnExit": false,
+  "workbench.editor.enablePreview": false,
+  "editor.minimap.enabled": false
+}

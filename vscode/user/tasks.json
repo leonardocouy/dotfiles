@@ -1,0 +1,69 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "rspec",
+      "type": "shell",
+      "command": "bundle exec rspec",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "group": "rails"
+      }
+    },
+    {
+      "label": "rspec file",
+      "type": "shell",
+      "command": "bundle exec rspec ${relativeFile}",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "group": "rails"
+      }
+    },
+    {
+      "label": "rails c",
+      "type": "shell",
+      "command": "bundle exec rails console",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "group": "rails"
+      }
+    },
+    {
+      "label": "rails s",
+      "type": "shell",
+      "command": "bundle exec rails server",
+      "problemMatcher": [],
+      "presentation": {
+        "reveal": "always",
+        "group": "rails"
+      },
+      "dependsOn": [
+        "rails server stop",
+        "rails db:migrate"
+      ],
+    },
+    {
+      "label": "rails server stop",
+      "type": "shell",
+      "command": "test -e ./tmp/pids/server.pid && kill -9 `cat ./tmp/pids/server.pid` || true",
+      "presentation": {
+        "reveal": "never",
+        "group": "rails_bg",
+        "panel": "new"
+      },
+    },
+    {
+      "label": "rails db:migrate",
+      "type": "shell",
+      "command": "bundle exec rails db:migrate",
+      "presentation": {
+        "reveal": "never",
+        "group": "rails_bg",
+        "panel": "new"
+      },
+    }
+  ]
+}
