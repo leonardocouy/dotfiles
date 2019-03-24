@@ -2,5 +2,5 @@
     name = Leonardo Flores
     email = contato@leonardocouy.com
 [core]
-    excludesfile = ~/git/.gitignore_global
+    excludesfile = ~/.gitignore_global
 	editor = nano

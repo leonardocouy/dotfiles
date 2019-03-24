@@ -1,6 +1,21 @@
-#!/bin/bash -e
+# ---------------------------------
+# Common aliases
+# ---------------------------------
 
-## Git
+alias ..="cd .."
+alias ...="cd ../.."
+alias ....="cd ../../.."
+alias .....="cd ../../../.."
+alias ~="cd ~" # `cd` is probably faster to type though
+alias -- -="cd -"
+
+alias ip="dig +short myip.opendns.com @resolver1.opendns.com"
+alias localip="ipconfig getifaddr en1"
+alias ips="ifconfig -a | grep -o 'inet6\? \(addr:\)\?\s\?\(\(\([0-9]\+\.\)\{3\}[0-9]\+\)\|[a-fA-F0-9:]\+\)' | awk '{ sub(/inet6? (addr:)? ?/, \"\"); print }'"
+
+# ---------------------------------
+# Git specific aliases
+# ---------------------------------
 
 alias ga='git add --all'
 alias gam="git commit --amend"
@@ -26,7 +41,9 @@ alias gu='git unstage'
 alias glg='git lg'
 alias gf='git fetch'
 
-## Ruby
+# ---------------------------------
+# Ruby specific aliases
+# ---------------------------------
 
 alias be='bundle exec'
 alias bi='bundle install'
@@ -34,22 +51,23 @@ alias bu='bundle update'
 alias bo='bundle outdated'
 alias bopen='bundle open' # bundle open GEM_NAME
 alias ber='bundle exec rake'
-
 alias rs='bundle exec rails log:clear && start'
 alias berc='bundle exec rails console'
 alias berdm='bundle exec rails db:migrate && bundle exec rails db:migrate RAILS_ENV=test'
 alias rl='tail -f log/development.log'
 
-if [ -d "$HOME/.rbenv" ]; then
-  export PATH="$HOME/.rbenv/bin:$PATH"
-  eval "$(rbenv init -)"
-fi
+# ---------------------------------
+# Tmux specific aliases
+# ---------------------------------
 
-
-## Tmux
 alias tmc="tmux new -s"
 alias tma="tmux attach -t"
 alias tmd="tmux detach"
 alias tmk="tmux kill-session -t"
 alias tml="tmux list-sessions"
 alias tms="tmux source-file ~/.tmux.conf"
+
+# This should be the last line of the file
+# For local changes
+# Don't make edits below this
+[ -f ".aliases.local" ] && source ".aliases.local"

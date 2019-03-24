@@ -1,0 +1,4 @@
+export CLICOLOR=1
+export LSCOLORS=dxcxexdxcxegedabagacad
+
+export PS1="\[\033[32m\]\w\[\033[33m\] \$(__git_ps1 '(%s)')\[\033[00m\]\n$ "
