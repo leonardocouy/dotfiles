@@ -1,4 +1,5 @@
 export PATH="$HOME/bin:$PATH"
+export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
 
 source $HOME/.bash_prompt
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"

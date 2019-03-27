@@ -92,4 +92,4 @@ function restore_db(){
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
-[ -f ".functions.local" ] && source ".functions.local"
+[ -f "$HOME/.presets/.functions.local" ] && source "$HOME/.presets/.functions.local"
