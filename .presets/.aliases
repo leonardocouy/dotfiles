@@ -67,6 +67,12 @@ alias tmk="tmux kill-session -t"
 alias tml="tmux list-sessions"
 alias tms="tmux source-file ~/.tmux.conf"
 
+#---------------------------------
+# Sync dotfiles
+#---------------------------------
+alias dotf='/usr/bin/git --git-dir=$HOME/workspace/dotfiles/.git --work-tree=$HOME/workspace/dotfiles'
+dotf config --local status.showUntrackedFiles no
+
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
