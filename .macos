@@ -349,9 +349,7 @@ for app in "Activity Monitor" \
 	"Photos" \
 	"Safari" \
 	"Spectacle" \
-	"SystemUIServer" \
-	"Terminal" \
-  "iTerm2"; do
+	"SystemUIServer"; do
 	killall "${app}" &> /dev/null
 done
 echo "Done. Note that some of these changes require a logout/restart to take effect."
