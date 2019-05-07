@@ -1,5 +1,6 @@
 export PATH="$HOME/bin:$PATH"
 export PATH="/usr/local/opt/postgresql@10/bin:$PATH"
+export PATH="/Applications/Postgres.app/Contents/Versions/10/bin:$PATH"
 
 source $HOME/.bash_prompt
 [[ -r "/usr/local/etc/profile.d/bash_completion.sh" ]] && . "/usr/local/etc/profile.d/bash_completion.sh"
@@ -22,3 +23,5 @@ if [ -d "$HOME/.rbenv" ]; then
   export PATH="$HOME/.rbenv/bin:$PATH"
   eval "$(rbenv init -)"
 fi
+
+eval "$(direnv hook bash)"
