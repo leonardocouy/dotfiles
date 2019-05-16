@@ -1,5 +1,3 @@
-source ~/.bash_profile
-
 find-up () {
     path=$(pwd)
     while [[ "$path" != "" && ! -e "$path/$1" ]]; do
