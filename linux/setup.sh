@@ -1,6 +1,7 @@
 #!/bin/bash
 
 ln -sv $PWD/.presets $HOME/
+ln -sfv $PWD/.bashrc $HOME/.bashrc
 ln -sfv $PWD/.bash_profile $HOME/.bash_profile
 ln -sfv $PWD/.tmux.conf $HOME/.tmux.conf
 ln -sfv $PWD/.pryrc $HOME/.pryrc
