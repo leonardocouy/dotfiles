@@ -17,8 +17,6 @@ searchin () {
     xargs -0 grep -l "$2"
 }
 
-code () { VSCODE_CWD="$PWD" open -n -b "com.microsoft.VSCode" --args $* ; }
-
 # Show all the names (CNs and SANs) listed in the SSL certificate
 # for a given domain
 getcertnames() {

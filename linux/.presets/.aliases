@@ -1,3 +1,5 @@
+#!/bin/bash
+
 # ---------------------------------
 # Common aliases
 # ---------------------------------
@@ -73,10 +75,12 @@ alias tms="tmux source-file ~/.tmux.conf"
 
 alias dkt='docker stats --format "table {{.Name}}\t{{.CPUPerc}}\t{{.MemUsage}}\t{{.NetIO}}"'
 alias dkps="docker ps --format '{{.ID}} ~ {{.Names}} ~ {{.Status}} ~ {{.Image}}'"
-alias dkc="docker-compose $1"
+alias dc='docker-compose'
 alias dstart='docker-compose start'
 alias dstop='docker-compose stop'
 alias drestart='docker-compose restart'
+alias code='/usr/bin/code --disable-gpu -n' 
+
 #---------------------------------
 # Sync dotfiles
 #---------------------------------
@@ -86,4 +90,4 @@ dotf config --local status.showUntrackedFiles no
 # This should be the last line of the file
 # For local changes
 # Don't make edits below this
-[ -f ".aliases.local" ] && source ".aliases.local"
+[ -f "$HOME/.presets/.aliases.local" ] && source "$HOME/.presets/.aliases.local"
