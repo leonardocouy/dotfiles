@@ -1,3 +1,4 @@
+config/puma.rb
 # Git credential file
 .gitconfig.local
 

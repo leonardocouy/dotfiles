@@ -86,7 +86,7 @@ function restore_db(){
   psql -c "DROP DATABASE IF EXISTS $1;"
   psql -c "CREATE DATABASE $1;"
 
-  pg_restore --verbose -d $1 -h localhost --no-acl --no-owner $2
+  pg_restore --verbose -d $1 -h localhost --no-acl --no-owner -j8 $2 
 }
 
 # This should be the last line of the file
