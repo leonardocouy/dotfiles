@@ -1,68 +1,64 @@
-# Path to your oh-my-zsh installation.
-export ZSH=$HOME/.oh-my-zsh
-
-# Set name of the theme to load.
-# Look in ~/.oh-my-zsh/themes/
-# Optionally, if you set this to "random", it'll load a random theme each
-# time that oh-my-zsh is loaded.
+export ZSH="$HOME/.oh-my-zsh"
+export PATH="$PATH:/usr/local/bin"
 ZSH_THEME="robbyrussell"
 
-# Uncomment the following line if you want to change the command execution time
-# stamp shown in the history command output.
-# The optional three formats: "mm/dd/yyyy"|"dd.mm.yyyy"|"yyyy-mm-dd"
-HIST_STAMPS="dd/mm/yyyy"
-
-# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
-plugins=(osx git rails ruby heroku rvm zsh-autosuggestions zsh-completions alias-tips)
-
-# User configuration
-
-export PATH="/usr/local/bin:/usr/local/bin:/usr/bin:/bin:/usr/sbin:/sbin"
-
-PATH=$PATH:$HOME/.rvm/bin # Add RVM to PATH for scripting
+export ASPNETCORE_ENVIRONMENT="Development"
+plugins=(git)
 
 source $ZSH/oh-my-zsh.sh
 
-# RVM VERSION
-function prompt_rvm {
-    rbv=`rvm-prompt`
-    rbv=${rbv#ruby-}
-    [[ $rbv == *"@"* ]] || rbv="${rbv}@default"
-    if [ -e Gemfile ]
-    then
-        echo $rbv
+## Sourcing presets
+
+typeset -ga sources
+
+sources+="$HOME/.presets/.aliases"
+sources+="$HOME/.presets/.functions"
+sources+="$HOME/.presets/.system"
+for file in $sources[@]; do
+  source "$file"
+done
+
+if [ -d "$HOME/.rbenv" ]; then
+  export PATH="$HOME/.rbenv/bin:$PATH"
+  eval "$(rbenv init -)"
+fi
+
+export NVM_DIR="$HOME/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh"  # This loads nvm
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion
+
+autoload -U add-zsh-hook
+
+### autoload nvmrc
+load-nvmrc() {
+  local node_version="$(nvm version)"
+  local nvmrc_path="$(nvm_find_nvmrc)"
+
+  if [ -n "$nvmrc_path" ]; then
+    local nvmrc_node_version=$(nvm version "$(cat "${nvmrc_path}")")
+
+    if [ "$nvmrc_node_version" = "N/A" ]; then
+      nvm install
+    elif [ "$nvmrc_node_version" != "$node_version" ]; then
+      nvm use
     fi
+  elif [ "$node_version" != "$(nvm version default)" ]; then
+    echo "Reverting to nvm default version"
+    nvm use default
+  fi
 }
+add-zsh-hook chpwd load-nvmrc
+load-nvmrc
 
-# Bindkeys
-bindkey "[D" backward-word
-bindkey "[C" forward-word
-bindkey "^[a" beginning-of-line
-bindkey "^[e" end-of-line
+### Added by Zplugin's installer
+source $HOME/.zplugin/bin/zplugin.zsh
+autoload -Uz _zplugin
+(( ${+_comps} )) && _comps[zplugin]=_zplugin
+### End of Zplugin installer's chunk
 
-# Window/Tab title
-
-DISABLE_AUTO_TITLE="true"
-
-# $1 = type; 0 - both, 1 - tab, 2 - title
-# rest = text
-setTerminalText () {
-    local mode=$1 ; shift
-    echo -ne "\033]$mode;$@\007"
-}
-stt_both  () { setTerminalText 0 $@; }
-stt_tab   () { setTerminalText 1 $@; }
-stt_title () { setTerminalText 2 $@; }
-
-# Production mode
-
-tab-color() {
-    echo -ne "\033]6;1;bg;red;brightness;$1\a"
-    echo -ne "\033]6;1;bg;green;brightness;$2\a"
-    echo -ne "\033]6;1;bg;blue;brightness;$3\a"
-}
-
-prod_mode () {
-    stt_tab "[PRODUÇÃO] $1"
-    tab-color
-}
+zplugin light zsh-users/zsh-autosuggestions
+zplugin light zdharma/fast-syntax-highlighting
+zplugin light zsh-users/zsh-completions
+zplugin load zdharma/history-search-multi-word
+zplugin ice pick"async.zsh" src"pure.zsh"
+zplugin light dfurnes/purer
